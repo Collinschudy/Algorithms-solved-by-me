@@ -317,9 +317,22 @@ function palind(words){
 
 }
 console.log(palind('my eye is the portal to which i peep'))
+
+
+
+
+
   
 
+// Convert an array of strings to array of numbers
 
+function stringToNum(strArr){
+  let newArr = strArr.map((p) => {
+    return Number(p)
+  })
+  return newArr
+  
+}
 
         
       
