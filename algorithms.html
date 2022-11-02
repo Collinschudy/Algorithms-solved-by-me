@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    body {
+        justify-items: left;
+        line-height: 1.5em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    h1 {
+        padding-left: 2em;
+    }
+</style>
+
+<body>
+    <h1>My Algorithms</h1>
+    <ol>
+        <li>A function that climbs the number of stairs climbed by a monk after s years</li>
+        <li>Checking for a strong number</li>
+        <li>A function that ensures equitable distribution of income in a marxist state.</li>
+        <li>A function that takes a string and returns the index value of each string</li>
+        <li>A function that tells you how many people that likes your work on a social media </li>
+        <li>A function that takes two strings and proceeds to sort and concatenate them returning each element once</li>
+        <li>The highest profit wins!</li>
+        <li>Beginner Series #3 Sum of Numbers</li>
+    </ol>
+    <script src="index6.js"></script>
+    <script src="worksheet.js"></script>
+
+    <script>
+
+
+        // Simplified fraction by finding the GCD and dividing by it.
+        function reduce(number, denomin) {
+            var gcd = function gcd(a, b) {
+                return b ? gcd(b, a % b) : a;
+            };
+            gcd = gcd(number, denomin);
+            return [number / gcd, denomin / gcd];
+        }
+
+        document.write(reduce(15, 20) + "<br>");
+
+        document.write(reduce(84810, 985612));
+    </script>
+
+    </script>
+
+</body>
+
+</html>
