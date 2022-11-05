@@ -347,28 +347,21 @@ function stringToNum(strArr){
 
 function explode(arr) {
   let score;
+  let row = []
   for (let j = 0; j < arr.length; j++) {
     if (typeof arr[0] == 'number' && typeof arr[1] == 'number') {
       score = arr[0] + arr[1];
-      let row = []
-      for (let i =0; i < score; i++){
-      row.push(arr)  
-      }
-      return row
     } else if (typeof arr[j] == 'number') {
       score = arr[j]
-       let row = []
-      for (let i =0; i < score; i++){
-      row.push(arr)  
-      }
-      return row
     }
     else if (typeof arr[0] != 'number' && typeof arr[1] != 'number') {
-      return 'void'
+      return 'Void!'
     }
-
   }
-
+  for (let i =0; i < score; i++){
+      row.push(arr)  
+      }
+return row
 }
         
       
