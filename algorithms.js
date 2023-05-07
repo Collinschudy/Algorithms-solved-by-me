@@ -363,5 +363,57 @@ function explode(arr) {
       }
 return row
 }
-        
-      
+
+// Check if a string (first argument, str) ends with the given target string (second argument, target).
+
+function confirmEnding(str, target) {
+  let confirm = str.slice(str.length - target.length)
+  console.log(confirm)
+  return confirm === target;
+}
+
+confirmEnding("Bastian", "n");
+
+
+
+
+// Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
+// Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
+
+
+function largestOfFour(arr) {
+  let largestNumArr = [];
+  for (let i = 0; i < arr.length; i++){
+    // console.log(arr[i].sort(function(a, b){return b - a}))
+    let newArr = arr[i].sort(function(a, b){return b - a})
+    largestNumArr.push(newArr[0])
+  }
+  console.log(largestNumArr)
+  return largestNumArr;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+
+
+
+// Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+// For the purpose of this exercise, you should also capitalize connecting words like the and of.
+
+function titleCase(str) {
+  let newString = []
+  let strsplit = str.split(' ')
+  console.log(strsplit)
+  for (let i = 0; i < strsplit.length; i++){
+    let strr = strsplit[i]
+    console.log(strr)
+    let neww = strr.charAt(0).toUpperCase() + strr.slice(1).toLowerCase();
+    
+    newString.push(neww)
+    // return neww
+  }
+  // let cap = str.charAt(0).toUpperCase() + str.slice(1)
+  return newString.join(' ')
+}
+
+console.log(titleCase("i'm a little tea pot"));
